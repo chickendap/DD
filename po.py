@@ -42,7 +42,8 @@ font.init()
 font = font.Font(None,35)
 lose1 = font.render('Player1 lose',True,(180,0,0))
 lose2 = font.render('Player2 lose',True,(180,0,0))
-
+speed_x = 10
+speed_y = 20
 
 
 while game:
@@ -77,4 +78,5 @@ while game:
         racket2.reset()
         ball.reset()
     display.update()
+
     clock.tick(fps)
