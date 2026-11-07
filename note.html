@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Note Management System</title>
+</head>
+
+<body>
+
+    <h1>Note Management System</h1>
+
+    <p>Welcome to your personal note manager!</p>
+
+    <hr>
+
+    <h2>My Notes</h2>
+
+    <a href="/add">
+        <button>Add New Note</button>
+    </a>
+
+    <br><br>
+
+    <form action="/" method="GET">
+        <input type="text" name="search"
+               placeholder="Search notes..."
+               value=" search ">
+        <button type="submit">Search</button>
+    </form>
+
+    <br>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+
+        
+        <tr>
+            <td> note id</td>
+
+            <td>note title</td>
+
+            <td>note category</td>
+
+            <td>
+                <a href="/view/{{ note['id'] }}">View</a> |
+
+                <a href="/edit/{{ note['id'] }}">Edit</a> |
+
+                <a href="/delete/{{ note['id'] }}">Delete</a>
+            </td>
+        </tr>
+
+        else 
+        <tr>
+            <td colspan="4">No notes found.</td>
+        </tr>
+         end for 
+
+    </table>
+
+</body>
+</html>
